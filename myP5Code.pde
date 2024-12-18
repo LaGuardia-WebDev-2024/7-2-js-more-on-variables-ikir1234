@@ -14,17 +14,26 @@ void draw(){
   //💡⬇️⬇️⬇️💡 Your Code For This Unit Goes Here
   
   noStroke();
-  fill(30, 204, 91); // a nice froggy green!
+  fill (randRed, randGreen, randBlue);; // a nice froggy green!
 
   ellipse(x, y, 200, 100); // face
   ellipse(x - 50, y - 50, 40, 40); // left eye socket
   ellipse(x + 50, y - 50, 40, 40); // right eye socket
 
-  fill(255, 255, 255); // for the whites of the eyes!
+  fill (225,225,225);; // for the whites of the eyes!
   ellipse(x - 50, y - 50, 30, 30); // left eyeball
   ellipse(x + 50, y - 50, 30, 30); // right eyeball
+  fill(46,46,41)
+  rect(x - 50,y - 50,10,10); //left pupil
+  rect(x + 50,y - 50,10,10); //right pupil
   
-
+  fill (240,90,126);
+  stroke(46,46,41);
+  strokeWeight(4)
+  ellipse(x,y + 13,100,45); // mouth
+  
+  x = mouseX
+  y = mouseY
 }
 
 
@@ -32,9 +41,9 @@ void draw(){
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
 
-var fillR = 255;
-var fillG = 0;
-var fillB = 255;
+var randRed = random(0,255);
+var randGreen = random(0,255);
+var randBlue = random(0,255);
 
 //🟡Mouse Pressed Procedue - Runs When Mouse is Pressed on Canvas
 void mousePressed(){
